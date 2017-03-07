@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	compile 'org.riversun:bigdoc:0.3.0'
+	
+    testCompile 'junit:junit:4.+'
+    testCompile 'org.assertj:assertj-core:3.6.+'
+}
+
