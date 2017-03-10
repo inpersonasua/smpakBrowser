@@ -24,7 +24,7 @@
           <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TableView fx:id="filesTable" onDragDone="#fileDropped" onDragDropped="#fileDropped" GridPane.rowIndex="1">
+            <TableView fx:id="filesTable" GridPane.rowIndex="1">
             	<placeholder>
             		<Label text="" />
             	</placeholder>
