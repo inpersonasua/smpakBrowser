@@ -1,4 +1,4 @@
-package smpakBrowser;
+package pl.pjask.smpakBrowser;
 
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;

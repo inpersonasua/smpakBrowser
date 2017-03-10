@@ -1,4 +1,14 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+version = '1.0'
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'smpakBrowser',
+					'Implementation-Version': version
+	}
+}
 
 repositories {
     jcenter()
@@ -11,3 +21,26 @@ dependencies {
     testCompile 'org.assertj:assertj-core:3.6.+'
 }
 
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'smpakBrowser.MainApp'
+    )
+  }
+  from('src/main/java') {
+  	include '**/*.fxml'
+  }
+}
+
+task fatJar(type: Jar) {
+  manifest.from jar.manifest
+  classifier = 'all'
+  from {
+    configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
+  } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+  }
+  with jar
+}

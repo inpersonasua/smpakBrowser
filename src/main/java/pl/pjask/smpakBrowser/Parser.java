@@ -1,4 +1,4 @@
-package smpakBrowser;
+package pl.pjask.smpakBrowser;
 
 public interface Parser extends AutoCloseable {
 

@@ -1,4 +1,4 @@
-package smpakBrowser;
+package pl.pjask.smpakBrowser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
